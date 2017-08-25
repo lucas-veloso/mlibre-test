@@ -1,15 +1,5 @@
 package main
 
-import (
-	"net/http"
-	"io/ioutil"
-	"encoding/json"
-	"fmt"
-	"log"
-)
-
-// API response model
-
 type buyer_rep_t struct {
 	Tags				[]string			`json:"tags"`
 }
@@ -43,7 +33,7 @@ type adress_t struct {
 	State				string				`json:"state"`
 }
 
-type MercadoLibreUser struct { 
+type MercadoLibreUser struct {
 	Id 					int					`json:"id"`
 	Nickname			string 				`json:"nickname"`
 	RegistrationDate	string 				`json:"registration_date"`
@@ -58,37 +48,6 @@ type MercadoLibreUser struct {
 	SellerReputation  	seller_reputation_t	`json:"seller_reputation"`
 	BuyerReputation		buyer_rep_t 	    `json:"buyer_reputation"`
 	Status 				status_t			`json:"status"`
-}
-
-
-func main() {
-
-	url := "https://api.mercadolibre.com/users/1"
-
-	client := http.Client{}
-
-	req, err := http.NewRequest(http.MethodGet, url, nil)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	res, err:= client.Do(req)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	body, err := ioutil.ReadAll(res.Body)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	user := MercadoLibreUser{}
-	jsonresp := json.Unmarshal(body,&user)
-	if jsonresp != nil {
-		log.Fatal(jsonresp)
-	}
-
-	fmt.Println(user.Id)
 }
 
 
