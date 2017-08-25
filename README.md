@@ -1,6 +1,6 @@
 # examen mercadolibre
 
-## Ambiente
+## Ambiente Selenium-Ruby
 
 Las pruebas se corrieron utilizando la siguiente configuracion de hardware y software
 
@@ -47,4 +47,14 @@ para correr las pruebas solo queda
 
 ```
 ruby stest.rb 
+```
+
+## Ambiente pruebas Rest
+
+para estas pruebas es necesario tener instalado go 1.8.3, se probo en un ambiente de windows 10 64bits.
+
+para correr las pruebas escribir por consola sobre el directorio en el que estan los archivos
+
+```
+go test -v  
 ```
