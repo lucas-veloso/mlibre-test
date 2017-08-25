@@ -33,16 +33,16 @@ type adress_t struct {
 	State				string					`json:"state"`
 }
 
-<<<<<<< HEAD:rest/model.go
+
 type MercadoLibreUser struct {
-	Id 					int					`json:"id"`
-	Nickname			string 				`json:"nickname"`
-	RegistrationDate	string 				`json:"registration_date"`
-	CountryId			string				`json:"country_id"`
-	Adress				adress_t			`json:"adress"`
-	UserType			string				`json:"user_type"`
-	Logo				string				`json:"logo"`
-=======
+	Id 				int					`json:"id"`
+	Nickname			string 					`json:"nickname"`
+	RegistrationDate		string 					`json:"registration_date"`
+	CountryId			string					`json:"country_id"`
+	Adress				adress_t				`json:"adress"`
+	UserType			string					`json:"user_type"`
+	Logo				string					`json:"logo"`
+
 type MercadoLibreUser struct { 
 	Id 				int					`json:"id"`
 	Nickname			string 					`json:"nickname"`
@@ -51,7 +51,6 @@ type MercadoLibreUser struct {
 	Adress				adress_t				`json:"adress"`
 	UserType			string					`json:"user_type"`
 	Logo				string					`json:"logo"`
->>>>>>> 9552ebcf85ed7472005b75b5a2e1641718706af0:rest/test.go
 	Points				int					`json:"points"`
 	SiteId				string					`json:"site_id"`
 	Permalink			string					`json:"permalink"`
